@@ -102,6 +102,13 @@
                     var hubConnection = new HubConnection("http://" + signalRServerName + ":58381/");
                     signalRServers.Add(signalRServerName, hubConnection);
 
+                    var connectionBuffer = 10;
+
+                    if (signalRServers.Count >= ServicePointManager.DefaultConnectionLimit - connectionBuffer)
+                    {
+                        ServicePointManager.DefaultConnectionLimit = signalRServers.Count + (connectionBuffer * 2);
+                    }
+
                     signalRHubProxies.Add(signalRServerName, signalRServers[signalRServerName].CreateHubProxy("ProcessingResultHub"));
                     
                     signalRServers[signalRServerName].Start().Wait();
