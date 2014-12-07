@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="3ea46f70-0136-4463-bd97-0ba89ef8c4fb" ChangeDateTime="12/07/2014 15:33:25">
+    <Property Name="ElementName" Value="[dbo].[Session].[EndUserSessionIdentifier]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Session]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SessionIdentifier" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b37dc044-2e06-4252-801a-3695df5fdc10" ChangeDateTime="12/07/2014 16:33:01">
+    <Property Name="ElementName" Value="[dbo].[DataToProcess].[SessionKey]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DataToProcess]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SessionIdentifier" />
+  </Operation>
+</Operations>
